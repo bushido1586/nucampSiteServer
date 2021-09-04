@@ -32,7 +32,7 @@ const campsiteSchema = new Schema({
     }, 
     description:{
         type: String, 
-        requires: true
+        required: true
     }, 
     image: {
         type: String, 
