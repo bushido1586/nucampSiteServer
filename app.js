@@ -11,6 +11,7 @@ const campsiteRouter = require('./routes/campsiteRouter');
 const promotionRouter = require('./routes/promotionRouter');
 const partnerRouter = require('./routes/partnerRouter');
 const uploadRouter = requite('./routes/uploadRouter');
+const favoriteRouter = require('./routes/favorite')
 
 const url = config.mongoUrl;
 
@@ -54,7 +55,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
-
+app.use('/favorite', favoriteRouter)
 app.use('/campsites', campsiteRouter);
 app.use('/promotions', promotionRouter);
 app.use('/partners', partnerRouter);

@@ -6,7 +6,6 @@ const cors = require('./cors');
 const partnerRouter = express.Router();
 
 partnerRouter.route('/')
-.options(cors.corsWithOptions, (req, res) => res.sendStatus(200))
 .get((req, res, next) => {
     Partner.find()
     .then(partners => {
